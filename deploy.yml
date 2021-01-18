@@ -6,6 +6,10 @@
     - name: Invoke Caretaker
       include_role:
         name: termlen0.caretaker.caretaker
+      vars:
+        sot_repo: git@github.com:termlen0/caretaker-sot.git
+        running: "/running_configs/{{ inventory_hostname }}/running.cfg"
+        archived: "/archived_configs/{{ inventory_hostname }}/config/running.cfg"
 
   tasks:
     - name: Configure the host parameters
