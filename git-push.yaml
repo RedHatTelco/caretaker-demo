@@ -1,0 +1,29 @@
+---
+- name: GIT PUSH
+  hosts: all
+  gather_facts: no
+  # environment:
+  #   GIT_SSH_OPTS: “-o StrictHostKeyChecking=no ”
+  #   GIT_KEY: “{{ secret_key }}”
+  vars:
+    backup_manager_git_repo: "caretaker-sot"
+    backup_manager_git_branch: main
+    backup_manager_git_server: "github.com"
+
+  roles:
+
+  - role: backup_manager
+    function: backup
+    backup_manager_git_key_file: "{{ secret_key }}"
+
+  # pre_tasks:
+  #   - debug: var=secret_key
+  #     run_once: true
+
+    # - set_fact:
+    #     key_contents: "{{ lookup('file', secret_key) }}"
+    #   become: yes
+    #   delegate_to: localhost
+    #   run_once: yes
+
+    # - debug: var=key_contents
