@@ -3,12 +3,12 @@
   hosts: ansible-1
   gather_facts: no
   vars:
-    sot_repo: git@github.com:termlen0/caretaker-sot.git
+    sot_repo: git@github.com:termlen0/test-github-push.git
 
   tasks:
     - name: ENSURE THAT A LOCAL ARCHIVE PATH EXISTS
       file:
-        path: "/archived_configs"
+        path: "/test_archived_configs"
         state: directory
         mode: 0777
       delegate_to: ansible-1
