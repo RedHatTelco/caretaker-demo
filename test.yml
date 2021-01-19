@@ -17,6 +17,7 @@
     - debug: var=secret_key
     - shell: "cat {{ secret_key }}"
       register: result
+      become: yes
     - debug: var=result
     - name: GATHER THE ARCHIVED CONFIGS
       git:
@@ -27,3 +28,4 @@
         accept_hostkey: true
       delegate_to: localhost
       run_once: yes
+      become: yes
