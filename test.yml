@@ -14,6 +14,10 @@
       delegate_to: ansible-1
       run_once: yes
       become: yes
+    - debug: var=secret_key
+    - shell: "cat {{ secret_key }}"
+      register: result
+    - debug: var=result
     - name: GATHER THE ARCHIVED CONFIGS
       git:
         repo: "{{ sot_repo }}"
