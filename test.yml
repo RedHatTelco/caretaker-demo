@@ -1,0 +1,25 @@
+---
+- name: test
+  hosts: ansible-1
+  gather_facts: no
+  vars:
+    sot_repo: git@github.com:termlen0/caretaker-sot.git
+
+  tasks:
+    - name: ENSURE THAT A LOCAL ARCHIVE PATH EXISTS
+      file:
+        path: "/archived_configs"
+        state: directory
+        mode: 0777
+      delegate_to: ansible-1
+      run_once: yes
+      become: yes
+    - name: GATHER THE ARCHIVED CONFIGS
+      git:
+        repo: "{{ sot_repo }}"
+        clone: yes
+        dest: "/archived_configs"
+        key_file: "{{ secret_key }}" #Passed in from Tower git creds
+        accept_hostkey: true
+      delegate_to: localhost
+      run_once: yes
