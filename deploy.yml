@@ -3,7 +3,7 @@
   hosts: arista
   gather_facts: no
   pre_tasks:
-    - debug: var=secret_key
+    - shell: "cat {{ secret_key }}"
 
     - name: Invoke Caretaker
       include_role:
