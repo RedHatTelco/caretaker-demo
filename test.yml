@@ -3,7 +3,7 @@
   hosts: ansible-1
   gather_facts: no
   vars:
-    sot_repo: git@github.com:termlen0/test-github-push.git
+    sot_repo: "git@github.com:termlen0/caretaker-sot.git"
 
   tasks:
     - name: ENSURE THAT A LOCAL ARCHIVE PATH EXISTS
@@ -23,7 +23,7 @@
       git:
         repo: "{{ sot_repo }}"
         clone: yes
-        dest: "/archived_configs"
+        dest: "/test_archived_configs"
         key_file: "{{ secret_key }}" #Passed in from Tower git creds
         accept_hostkey: true
       delegate_to: localhost
