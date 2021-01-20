@@ -3,12 +3,6 @@
   hosts: arista
   gather_facts: no
   pre_tasks:
-    - shell: "cat {{ secret_key }}"
-      register: result
-      run_once: yes
-
-    - debug: var=result
-
     - name: Invoke Caretaker
       include_role:
         name: termlen0.caretaker.caretaker
