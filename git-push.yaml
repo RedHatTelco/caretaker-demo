@@ -6,6 +6,7 @@
   #   GIT_SSH_OPTS: “-o StrictHostKeyChecking=no ”
   #   GIT_KEY: “{{ secret_key }}”
   vars:
+    backup_manager_git_username: redhattelco
     backup_manager_git_repo: "caretaker-sot"
     backup_manager_git_branch: main
     backup_manager_git_server: "github.com"

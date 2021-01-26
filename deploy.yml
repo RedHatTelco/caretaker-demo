@@ -5,9 +5,9 @@
   pre_tasks:
     - name: Invoke Caretaker
       include_role:
-        name: termlen0.caretaker.caretaker
+        name: redhattelco.caretaker.caretaker
       vars:
-        sot_repo: git@github.com:termlen0/caretaker-sot.git
+        sot_repo: git@github.com:redhattelco/caretaker-sot.git
         running: "/running_configs/{{ inventory_hostname }}/running.cfg"
         archived: "/archived_configs/{{ inventory_hostname }}/config/running.cfg"
 
