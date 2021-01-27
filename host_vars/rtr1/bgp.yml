@@ -11,9 +11,10 @@ bgp_config:
       redistribute:
         - protocol: ospf
           id: 1
-    - neighbor: 10.200.200.2
-      activate: yes
-    - networks:
+      neighbors:
+        - neighbor: 10.200.200.2
+          activate: yes
+      networks:
         - prefix: 10.100.100.0
           masklen: 24
         - prefix: 10.200.200.0
