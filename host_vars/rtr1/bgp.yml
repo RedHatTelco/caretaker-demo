@@ -1,6 +1,15 @@
 bgp_config:
   bgp_as: 65000
   networks:
+    - prefix: 10.100.100.0
+      masklen: 24
+    - prefix: 10.200.200.0
+      masklen: 24
+    - prefix: 172.16.0.0
+      masklen: 16
+    - prefix: 192.168.1.1
+      masklen: 32
+# Do not edit above this line for demo
     - prefix: 10.25.25.0
       masklen: 24
     - prefix: 10.25.26.0
