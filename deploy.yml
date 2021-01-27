@@ -23,4 +23,4 @@
       cisco.ios.ios_bgp:
         config: "{{ bgp_config }}"
         operation: replace
-      when: ansible_network_os == 'eos'
+      when: ansible_network_os == 'ios'
