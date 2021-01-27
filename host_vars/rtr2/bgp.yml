@@ -10,7 +10,6 @@ bgp_config:
     - afi: ipv4
       redistribute:
         - protocol: ospf
-          id: 1
   networks:
     - prefix: 10.101.101.0
       masklen: 24
