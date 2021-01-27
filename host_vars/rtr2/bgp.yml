@@ -1,5 +1,16 @@
 bgp_config:
   bgp_as: 65001
+  router_id: 192.168.2.2
+  log_neighbor_changes: true
+  neighbors:
+    - neighbor: 10.200.200.1
+      remote_as: 65000
+      ebgp_multihop: 255
+  address_family:
+    - afi: ipv4
+      redistribute:
+        - protocol: ospf
+          id: 1
   networks:
     - prefix: 10.101.101.0
       masklen: 24
