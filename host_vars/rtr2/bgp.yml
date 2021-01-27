@@ -10,17 +10,19 @@ bgp_config:
     - afi: ipv4
       redistribute:
         - protocol: ospf
-  networks:
-    - prefix: 10.101.101.0
-      masklen: 24
-    - prefix: 10.200.200.0
-      masklen: 24
-    - prefix: 172.18.0.0
-      masklen: 16
-    - prefix: 192.168.2.2
-      masklen: 32
+    - neighbor: 10.200.200.1
+      activate: yes
+    - networks:
+        - prefix: 10.101.101.0
+          masklen: 24
+        - prefix: 10.200.200.0
+          masklen: 24
+        - prefix: 172.18.0.0
+          masklen: 16
+        - prefix: 192.168.2.2
+          masklen: 32
 # Do not edit above this line for demo
-    - prefix: 10.35.25.0
-      masklen: 24
-    - prefix: 10.35.26.0
-      masklen: 24
+        - prefix: 10.35.25.0
+          masklen: 24
+        - prefix: 10.35.26.0
+          masklen: 24
