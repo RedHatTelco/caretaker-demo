@@ -1,6 +1,6 @@
 ---
 - name: Deploy IaC configs to BGP routers
-  hosts:
+  hosts: rtr1,rtr2
   gather_facts: no
   pre_tasks:
     - name: Invoke Caretaker
