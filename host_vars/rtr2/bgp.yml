@@ -28,4 +28,6 @@ bgp_config:
         - prefix: 10.35.26.0
           masklen: 24
         - prefix: 10.35.27.0
-          masklen: 24          
+          masklen: 24
+        - prefix: 10.35.27.0
+          masklen: 24   
