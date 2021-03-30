@@ -1,0 +1,8 @@
+---
+- name: Deploy IaC configs to BGP routers
+  hosts: ansible-1
+  gather_facts: no
+  tasks:
+    - name: Open a ticket
+      debug:
+        msg: "Opening ticket in ITSM...."
