@@ -10,6 +10,8 @@ interfaces:
   interfaces_config:
     - name: Loopback100
       description: BGP interface for rtr2
+    - name: Loopback0
+      description: default loopback interface
     - name: Tunnel0
       description: Tunnel interface to rtr4
       mtu: 1394
