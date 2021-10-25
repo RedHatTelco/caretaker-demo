@@ -1,6 +1,6 @@
 ---
 - name: Deploy IaC configs to BGP routers
-  hosts: rtr1,rtr2
+  hosts: rtr1,rtr2,ansible-1
   gather_facts: no
   pre_tasks:
     - name: Invoke Caretaker
@@ -10,6 +10,7 @@
         sot_repo: git@github.com:redhattelco/caretaker-sot.git
         running: "/running_configs/{{ inventory_hostname }}/running.cfg"
         archived: "/archived_configs/{{ inventory_hostname }}/config/running.cfg"
+        worker_node: "ansible-1"
 
   tasks:
 

@@ -1,3 +1,4 @@
 - src: https://github.com/termlen0/backup_manager
   name: backup_manager
   scm: git
+  version: origin/backup-aap2
