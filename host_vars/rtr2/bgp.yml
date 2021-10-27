@@ -29,3 +29,5 @@ bgp_config:
           masklen: 24
         - prefix: 10.35.31.0
           masklen: 24         
+        - prefix: 10.35.32.0
+          masklen: 24   
