@@ -10,7 +10,7 @@
     backup_manager_git_repo: "caretaker-sot"
     backup_manager_git_branch: main
     backup_manager_git_server: "github.com"
-    backup_manager_worker_node: "backup-server"
+    backup_manager_worker_node: "ansible-1"
 
   roles:
 
